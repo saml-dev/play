@@ -1,3 +1,14 @@
 service MovieService {
   
+  message GetDetailRequest {
+    string id = 1;
+  }
+
+  message GetDetailResponse {
+    string id = 1;
+    string title = 2;
+  }
+  
+  rpc GetDetail(GetDetailRequest) returns (GetDetailResponse);
+  
 }
